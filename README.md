@@ -124,3 +124,9 @@ Response (JSON):
 "num2": 20,
 "sum": 30
 }
+
+
+<img width="478" height="244" alt="image_1" src="https://github.com/user-attachments/assets/a0d5e517-ef50-42b1-b574-e6afb8decb0d" />
+<img width="436" height="230" alt="image_2" src="https://github.com/user-attachments/assets/d6f194cb-216a-4d7b-b05f-c765e4609e6a" />
+
+
