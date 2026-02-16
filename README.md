@@ -33,121 +33,94 @@ source venv/bin/activate
 
 API Endpoints
 
-Base URL:
+Base URL: http://127.0.0.1:5000
 
-http://127.0.0.1:5000
-Authentication APIs
+AUTHENTICATION APIs
+
 Login
+Endpoint: POST /login
+Content-Type: application/x-www-form-urlencoded
 
-Endpoint
-
-POST /login
-
-Content-Type
-
-application/x-www-form-urlencoded
-
-Request Body
-
+Request Body:
 username=admin
 password=1234
 
-Response
+Response:
 
 Redirects to / on success
 
-Returns error message on failure
+Returns "Invalid credentials" on failure
 
 Logout
+Endpoint: GET /logout
 
-Endpoint
+Response:
 
-GET /logout
-
-Response
+Clears session
 
 Redirects to /login
-Notes APIs
+
+NOTES APIs
+
 Get All Notes
+Endpoint: GET /
+Authentication Required: Yes
 
-Endpoint
-
-GET /
-
-Auth Required: Yes
-
-Response
+Response:
 
 Returns HTML page displaying all notes
+
 Add Note
+Endpoint: POST /add
+Content-Type: application/x-www-form-urlencoded
 
-Endpoint
-
-POST /add
-
-Content-Type
-
-application/x-www-form-urlencoded
-
-Request Body
-
+Request Body:
 note=This is my note
 
-Response
+Response:
+
+Saves note to database
 
 Redirects to /
+
 Edit Note
+Endpoint: POST /edit/<id>
+Example: POST /edit/1
 
-Endpoint
-
-POST /edit/<id>
-
-Example
-
-POST /edit/1
-
-Request Body
-
+Request Body:
 note=Updated note text
 
-Response
+Response:
+
+Updates note
 
 Redirects to /
+
 Delete Note
+Endpoint: GET /delete/<id>
+Example: GET /delete/1
 
-Endpoint
+Response:
 
-GET /delete/<id>
-
-Example
-
-GET /delete/1
-
-Response
+Deletes note
 
 Redirects to /
+
 JSON API
+
 Add Numbers API
+Endpoint: POST /addNum
+Content-Type: application/json
 
-Endpoint
-
-POST /addNum
-
-Content-Type
-
-application/json
-
-Request Body
-
+Request Body (JSON):
 {
-  "num1": 10,
-  "num2": 20
+"num1": 10,
+"num2": 20
 }
 
-Response
-
+Response (JSON):
 {
-  "num1": 10,
-  "num2": 20,
-  "sum": 30
+"num1": 10,
+"num2": 20,
+"sum": 30
 }
