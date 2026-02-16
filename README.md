@@ -21,7 +21,7 @@ Gunicorn (for production deployment)
 Installation
 
 1. Clone the repository
-git clone https://github.com/yourusername/flask-notes-app.git](https://github.com/239x1a05a9-create/Python_flask_01.git
+git clone https://github.com/239x1a05a9-create/Python_flask_01.git
 cd flask-notes-app
 2. Create virtual environment
 python -m venv venv
